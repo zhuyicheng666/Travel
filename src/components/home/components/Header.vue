@@ -2,7 +2,9 @@
   <div class="header">
     <div class="header-left"><div class="iconfont iconfanhui back-icon"></div></div>
     <div class="header-input"><span class="iconfont iconsousuo"></span>输入景点/游玩主题</div>
+    <router-link to='/city'>
     <div class="header-right">{{this.city}}<span class="iconfont iconarrow-down arrow-icon"></span></div>
+    </router-link>
   </div>
 </template>
 
@@ -19,9 +21,9 @@ export default {
   @import '../../../assets/styles/varibles.styl';
   .header
     display: flex
-    height: .86rem
+    height: $headerHeight
     background : $bgColor
-    line-height .86rem
+    line-height $headerHeight
     color:#fff
 
     .header-left
@@ -46,6 +48,7 @@ export default {
       width 1.24rem
       float:right
       text-align :center
+      color: #fff
       .arrow-icon
         font-size :.24rem
         display :inline-block
