@@ -3,8 +3,19 @@
 
 // 参考文档地址：https://cli.vuejs.org/zh/config/
 
-module.exports = {
+const path = require('path')
 
+function resolve (dir) {
+  return path.join(__dirname, dir)
+}
+module.exports = {
+  configureWebpack: {
+    resolve: {
+      alias: {
+        common: resolve('src/common')
+      }
+    }
+  },
   devServer: {
 
     /**
